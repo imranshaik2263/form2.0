@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<h2>Student Registration</h2>
+<form>
+  Name: <input type="text" ng-model="name"><br><br>
+  Course: <input type="text" ng-model="course"><br><br>
+  College: <input type="text" ng-model="college"><br><br>
+</form>
+<h3>Entered Details:</h3>
+<p>Name: {{name}}</p>
+<p>Course: {{course}}</p>
+<p>College: {{college}}</p>
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+});
+</script>
+</body>
+</html>
