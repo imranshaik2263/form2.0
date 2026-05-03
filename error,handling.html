@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validation Form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+<h2>Registration Form</h2>
+<form name="regForm">
+Email:
+  <input type="email" name="email" ng-model="email" required>
+  <span ng-show="regForm.email.$touched && regForm.email.$invalid">
+    Enter valid email
+  </span>
+  <br><br>
+Age:
+  <input type="number" name="age" ng-model="age" min="18" required>
+  <span ng-show="regForm.age.$touched && regForm.age.$invalid">
+    Age must be 18+
+  </span>
+  <br><br>
+<button ng-disabled="regForm.$invalid">Submit</button>
+</form>
+</body>
+</html>
